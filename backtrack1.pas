@@ -14,17 +14,17 @@ begin
     writeln;
 end;
 
-procedure back(var i: integer);
-var j: integer;
+procedure back(x: integer);
+var j, y: integer;
 begin
     for j := 1 to n do
         begin
             if not used[j] then
                 begin
-                    a[i] := j;
+                    a[x] := j;
                     used[j] := true;
-                    if i = n then printPer
-                    else back(i + 1);
+                    if x = n then printPer
+                    else back(x + 1);
                     used[j] := false;
                 end;
         end;
